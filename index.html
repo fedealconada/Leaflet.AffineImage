@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <!-- jQuery --> 
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <!-- jQuery --> 
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        
+        <!-- LeafletJS --> 
+        <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+
+        <!-- Leaflet.AffineImage --> 
+        <script src="./js/AffineImageLayer.js"></script>
+        <!-- Affine Toolbox --> 
+        <script src="./js/L.Affine.Toolbox.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var map = init_map();
+                var affineOverlay;
+                var image = new Image();
+
+                image.onload = function() {
+
+                    L.affineImage().params({image:image,boundingScale:0.5}).addTo(map);
+                    
+                    //Adding marker
+                    L.marker([-34.6,-58.383],{draggable: true}).addTo(map);
+
+                };
+
+                image.src = "./img/buildingLayer.png";
+                
+                return;
+            });
+
+            function init_map() {
+                var map = L.map('map');
+                //tileLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
+                var tileUrl = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png';
+                var tileAttrib = // Rule #2: Give credit where it's due.
+                    '&copy; <a href="http://www.openstreetmap.org/">OpenStreetMap</a> ' +
+                    'contributors, CC-BY-SA, Tiles Courtesy of ' +
+                    '<a href="http://developer.mapquest.com/web/products/open/map">' +
+                    'MapQuest</a>';
+                var tiles = new L.TileLayer(
+                    tileUrl,
+                    {maxZoom: 17, attribution: tileAttrib}
+                );
+
+                map.setView(new L.LatLng(-34.6,-58.383), 17).addLayer(tiles);
+
+                return map;
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="map"></div>
+        </div>
+        <button id="theButton">
+            Print Ground Control Points to Console
+        </button>
+        <a href="https://github.com/thatjpk/LeafletAffineImageOverlay">
+            See latest code on the githubs.
+        </a>
+    </body>
+</html>
