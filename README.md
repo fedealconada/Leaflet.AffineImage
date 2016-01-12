@@ -4,15 +4,13 @@
 This is an overlay for leaflet[1] that lets you display an image on top of
 the map, transform it using three anchors, and customise the opacity of the image using the toolbox provided.
 
-This code is inspired & portions taken from:
-    - [John P. Kiffmeyer](https://github.com/thatjpk/LeafletAffineImageOverlay)
-	- Stanislav Sumbera Sumbera [3] https://gist.github.com/Sumbera/11114288
+This code is inspired & portions taken from:  
+    - [John P. Kiffmeyer](https://github.com/thatjpk/LeafletAffineImageOverlay)  
+	- Stanislav Sumbera Sumbera [3] https://gist.github.com/Sumbera/11114288  
 
-This mainly takes the ideas of [3] in terms of sekeleton and implementing an L.Class and uses the main methods of [2] to create resizers and render the image.
+This mainly takes the ideas of [3] in terms of sekeleton and implementing an L.Class and uses the main methods of [2] to create resizers and render the image.  
 
 [1] http://leaflet.cloudmade.com/
-[2] https://github.com/thatjpk/LeafletAffineImageOverlay
-[3] https://gist.github.com/Sumbera/11114288
 
 ![Screencapture GIF](demo.gif)
 
