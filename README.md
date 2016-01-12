@@ -31,7 +31,7 @@ image.src = "./img/buildingLayer.png";
 
 Look at index.html for a usage example.
 
-### Legalese
+### LEGAL
 
 <federico.alconada@icloud.com> wrote this file. As long as you retain this notice you
 can do whatever you want with this stuff.
