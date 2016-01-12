@@ -6,9 +6,9 @@ the map, transform it using three anchors, and customise the opacity of the imag
 
 This code is inspired & portions taken from:  
     - [John P. Kiffmeyer](https://github.com/thatjpk/LeafletAffineImageOverlay)  
-	- Stanislav Sumbera Sumbera [3] https://gist.github.com/Sumbera/11114288  
+	- [Stanislav Sumbera Sumbera](https://gist.github.com/Sumbera/11114288)
 
-This mainly takes the ideas of [3] in terms of sekeleton and implementing an L.Class and uses the main methods of [2] to create resizers and render the image.  
+This mainly takes the ideas of [Stanislav Sumbera Sumbera](https://gist.github.com/Sumbera/11114288) in terms of sekeleton and implementing an L.Class and uses the main methods of [John P. Kiffmeyer](https://github.com/thatjpk/LeafletAffineImageOverlay) to create resizers (anchors) and render the image.  
 
 [1] http://leaflet.cloudmade.com/
 
@@ -31,7 +31,7 @@ image.src = "./img/buildingLayer.png";
 
 Look at index.html for a usage example.
 
-### Legalese
+### LEGAL
 
 <federico.alconada@icloud.com> wrote this file. As long as you retain this notice you
 can do whatever you want with this stuff.
